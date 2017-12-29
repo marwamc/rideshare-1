@@ -1,0 +1,82 @@
+{
+  "name": "rideshare",
+  "scripts": {
+  },
+  "env": {
+    "LANG": {
+      "required": true
+    },
+    "MAILGUN_API_KEY": {
+      "required": true
+    },
+    "MAILGUN_DOMAIN": {
+      "required": true
+    },
+    "MAILGUN_PUBLIC_KEY": {
+      "required": true
+    },
+    "MAILGUN_SMTP_LOGIN": {
+      "required": true
+    },
+    "MAILGUN_SMTP_PASSWORD": {
+      "required": true
+    },
+    "MAILGUN_SMTP_PORT": {
+      "required": true
+    },
+    "MAILGUN_SMTP_SERVER": {
+      "required": true
+    },
+    "PAPERTRAIL_API_TOKEN": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    },
+    "Settings.mail.default_url_options.host": {
+      "required": true
+    },
+    "Settings.mail.default_url_options.port": {
+      "required": true
+    },
+    "Settings.mail.default_url_options.protocol": {
+      "required": true
+    },
+    "Settings.mail.from": {
+      "required": true
+    },
+    "Settings.platform_name": {
+      "required": true
+    },
+    "Settings.secret_key_base": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    },
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "mailgun",
+    "papertrail",
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}
